@@ -27,3 +27,9 @@ server.get('/teste', (req, res) => {
     const escola = req.query.escola;
     return res.json({teste: `Estamos estudando na ${ escola }`});
 })
+
+//teste com route
+server.get('/teste/:id', (req, res) => {
+    const id = req.params.id;
+    return res.json({teste: `ID da escola: ${id}`});
+})
